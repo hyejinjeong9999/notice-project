@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - NoticeServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>NoticeServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.rsupport.noticeproject.notice.service.html">com.rsupport.noticeproject.notice.service</a> &gt; NoticeServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.932s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">데이터가 추가된 것을 확인</td>
+<td class="success">createNotice()</td>
+<td class="success">0.042s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">redis와 db에 데이터가 삭제되었는지 확인</td>
+<td class="success">deleteNotice()</td>
+<td class="success">0.102s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">redis에 저장된 데이터 확인, 조회수 +1 확인</td>
+<td class="success">findNoticeDetail()</td>
+<td class="success">0.164s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">유효기간이 지난 데이터들을 제거하고 가져오는지 확인</td>
+<td class="success">findNoticeList()</td>
+<td class="success">0.149s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">redis에 있는 모든 데이터들이 db에 저장되는지 확인</td>
+<td class="success">setNoticeViews()</td>
+<td class="success">0.120s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">공지사항이 수정되고 레디스에 데이터가 없는 것을 확인</td>
+<td class="success">updateNotice()</td>
+<td class="success">1.355s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>22:04:28.082 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+22:04:28.096 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+22:04:28.149 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.rsupport.noticeproject.notice.service.NoticeServiceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+22:04:28.168 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rsupport.noticeproject.notice.service.NoticeServiceTest], using SpringBootContextLoader
+22:04:28.173 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.rsupport.noticeproject.notice.service.NoticeServiceTest]: class path resource [com/rsupport/noticeproject/notice/service/NoticeServiceTest-context.xml] does not exist
+22:04:28.174 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.rsupport.noticeproject.notice.service.NoticeServiceTest]: class path resource [com/rsupport/noticeproject/notice/service/NoticeServiceTestContext.groovy] does not exist
+22:04:28.174 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.rsupport.noticeproject.notice.service.NoticeServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+22:04:28.174 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.rsupport.noticeproject.notice.service.NoticeServiceTest]: NoticeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:04:28.278 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.rsupport.noticeproject.notice.service.NoticeServiceTest]
+22:04:28.388 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/jeonghyejin/workspace-study/rsupport/notice-project/build/classes/java/main/com/rsupport/noticeproject/NoticeProjectApplication.class]
+22:04:28.390 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.rsupport.noticeproject.NoticeProjectApplication for test class com.rsupport.noticeproject.notice.service.NoticeServiceTest
+22:04:28.582 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.rsupport.noticeproject.notice.service.NoticeServiceTest]: using defaults.
+22:04:28.585 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+22:04:28.605 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@26f143ed, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3c1e3314, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4b770e40, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@78e16155, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@54a3ab8f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1968a49c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6a1ebcff, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@19868320, org.springframework.test.context.event.EventPublishingTestExecutionListener@50b0bc4c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@c20be82, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@13c612bd, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ef41c66, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6b739528, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@622ef26a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@41de5768]
+22:04:28.611 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3fc08eec testClass = NoticeServiceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5cad8b7d testClass = NoticeServiceTest, locations = '{}', classes = '{class com.rsupport.noticeproject.NoticeProjectApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@10993713, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7b324585, [ImportsContextCustomizer@7b02e036 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7894f09b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7be58f16, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1e1d3956, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@51bf5add], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.4)
+
+2022-03-06 22:04:29.291  INFO 23887 --- [    Test worker] c.r.n.notice.service.NoticeServiceTest   : Starting NoticeServiceTest using Java 11.0.11 on jeonghyejin-ui-MacBookPro.local with PID 23887 (started by jeonghyejin in /Users/jeonghyejin/workspace-study/rsupport/notice-project)
+2022-03-06 22:04:29.298  INFO 23887 --- [    Test worker] c.r.n.notice.service.NoticeServiceTest   : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2022-03-06 22:04:31.002  INFO 23887 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-06 22:04:31.007  INFO 23887 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-06 22:04:31.096  INFO 23887 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.rsupport.noticeproject.notice.infra.cache.NoticeCacheRepository. If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository.
+2022-03-06 22:04:31.271  INFO 23887 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 256 ms. Found 3 JPA repository interfaces.
+2022-03-06 22:04:31.301  INFO 23887 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-06 22:04:31.303  INFO 23887 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-06 22:04:31.327  INFO 23887 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.rsupport.noticeproject.notice.infra.repository.FileRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-06 22:04:31.329  INFO 23887 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.rsupport.noticeproject.notice.infra.repository.NoticeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-06 22:04:31.330  INFO 23887 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.rsupport.noticeproject.user.infra.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-06 22:04:31.336  INFO 23887 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 Redis repository interfaces.
+2022-03-06 22:04:32.862  INFO 23887 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-06 22:04:32.914  INFO 23887 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-06 22:04:33.098  INFO 23887 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-06 22:04:33.204  INFO 23887 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-06 22:04:33.294  INFO 23887 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-06 22:04:33.323  INFO 23887 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: 
+    
+    drop table if exists file CASCADE 
+Hibernate: 
+    
+    drop table if exists notice CASCADE 
+Hibernate: 
+    
+    drop table if exists user CASCADE 
+Hibernate: 
+    
+    drop sequence if exists hibernate_sequence
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: 
+    
+    create table file (
+       file_no bigint not null,
+        store_file_name varchar(255),
+        upload_file_name varchar(255),
+        notice_notice_no bigint,
+        primary key (file_no)
+    )
+Hibernate: 
+    
+    create table notice (
+       notice_no bigint not null,
+        created_at timestamp not null,
+        updated_at timestamp not null,
+        contents varchar(255),
+        notice_end_date timestamp,
+        notice_start_date timestamp,
+        title varchar(255),
+        views integer not null,
+        user_user_no bigint,
+        primary key (notice_no)
+    )
+Hibernate: 
+    
+    create table user (
+       user_no bigint not null,
+        created_at timestamp not null,
+        updated_at timestamp not null,
+        role varchar(255) not null,
+        user_id varchar(255) not null,
+        user_name varchar(255) not null,
+        user_pw varchar(255) not null,
+        primary key (user_no)
+    )
+Hibernate: 
+    
+    alter table user 
+       add constraint UK_a3imlf41l37utmxiquukk8ajc unique (user_id)
+Hibernate: 
+    
+    alter table file 
+       add constraint FKfpjc7mks0r6qfwlp4b2fl9jwm 
+       foreign key (notice_notice_no) 
+       references notice
+Hibernate: 
+    
+    alter table notice 
+       add constraint FK5orbboi3v37hmv58kiohvml9u 
+       foreign key (user_user_no) 
+       references user
+2022-03-06 22:04:34.331  INFO 23887 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-06 22:04:34.340  INFO 23887 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-06 22:04:36.021  WARN 23887 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-06 22:04:38.312  INFO 23887 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-03-06 22:04:38.313  INFO 23887 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-03-06 22:04:38.315  INFO 23887 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2022-03-06 22:04:38.356  INFO 23887 --- [    Test worker] c.r.n.notice.service.NoticeServiceTest   : Started NoticeServiceTest in 9.669 seconds (JVM running for 11.637)
+2022-03-06 22:04:38.434  INFO 23887 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@3fc08eec testClass = NoticeServiceTest, testInstance = com.rsupport.noticeproject.notice.service.NoticeServiceTest@685e97e0, testMethod = updateNotice@NoticeServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5cad8b7d testClass = NoticeServiceTest, locations = '{}', classes = '{class com.rsupport.noticeproject.NoticeProjectApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@10993713, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7b324585, [ImportsContextCustomizer@7b02e036 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7894f09b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7be58f16, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1e1d3956, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@51bf5add], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1027cdcd]; rollback [true]
+Hibernate: 
+    select
+        notice0_.notice_no as notice_n1_1_,
+        notice0_.created_at as created_2_1_,
+        notice0_.updated_at as updated_3_1_,
+        notice0_.contents as contents4_1_,
+        notice0_.notice_end_date as notice_e5_1_,
+        notice0_.notice_start_date as notice_s6_1_,
+        notice0_.title as title7_1_,
+        notice0_.user_user_no as user_use9_1_,
+        notice0_.views as views8_1_ 
+    from
+        notice notice0_
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        user
+        (created_at, updated_at, role, user_id, user_name, user_pw, user_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        user
+        (created_at, updated_at, role, user_id, user_name, user_pw, user_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        user0_.user_no as user_no1_2_,
+        user0_.created_at as created_2_2_,
+        user0_.updated_at as updated_3_2_,
+        user0_.role as role4_2_,
+        user0_.user_id as user_id5_2_,
+        user0_.user_name as user_nam6_2_,
+        user0_.user_pw as user_pw7_2_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        notice0_.notice_no as notice_n1_1_,
+        notice0_.created_at as created_2_1_,
+        notice0_.updated_at as updated_3_1_,
+        notice0_.contents as contents4_1_,
+        notice0_.notice_end_date as notice_e5_1_,
+        notice0_.notice_start_date as notice_s6_1_,
+        notice0_.title as title7_1_,
+        notice0_.user_user_no as user_use9_1_,
+        notice0_.views as views8_1_ 
+    from
+        notice notice0_ 
+    where
+        notice0_.title=?
+Hibernate: 
+    select
+        notice0_.notice_no as notice_n1_1_,
+        notice0_.created_at as created_2_1_,
+        notice0_.updated_at as updated_3_1_,
+        notice0_.contents as contents4_1_,
+        notice0_.notice_end_date as notice_e5_1_,
+        notice0_.notice_start_date as notice_s6_1_,
+        notice0_.title as title7_1_,
+        notice0_.user_user_no as user_use9_1_,
+        notice0_.views as views8_1_ 
+    from
+        notice notice0_ 
+    left outer join
+        user user1_ 
+            on notice0_.user_user_no=user1_.user_no 
+    where
+        user1_.user_id=? 
+        and notice0_.notice_no=?
+2022-03-06 22:04:39.762  INFO 23887 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@3fc08eec testClass = NoticeServiceTest, testInstance = com.rsupport.noticeproject.notice.service.NoticeServiceTest@685e97e0, testMethod = updateNotice@NoticeServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5cad8b7d testClass = NoticeServiceTest, locations = '{}', classes = '{class com.rsupport.noticeproject.NoticeProjectApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@10993713, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7b324585, [ImportsContextCustomizer@7b02e036 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7894f09b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7be58f16, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1e1d3956, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@51bf5add], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+2022-03-06 22:04:39.782  INFO 23887 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@3fc08eec testClass = NoticeServiceTest, testInstance = com.rsupport.noticeproject.notice.service.NoticeServiceTest@591b9836, testMethod = deleteNotice@NoticeServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5cad8b7d testClass = NoticeServiceTest, locations = '{}', classes = '{class com.rsupport.noticeproject.NoticeProjectApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@10993713, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7b324585, [ImportsContextCustomizer@7b02e036 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7894f09b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7be58f16, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1e1d3956, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@51bf5add], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1027cdcd]; rollback [true]
+Hibernate: 
+    select
+        notice0_.notice_no as notice_n1_1_,
+        notice0_.created_at as created_2_1_,
+        notice0_.updated_at as updated_3_1_,
+        notice0_.contents as contents4_1_,
+        notice0_.notice_end_date as notice_e5_1_,
+        notice0_.notice_start_date as notice_s6_1_,
+        notice0_.title as title7_1_,
+        notice0_.user_user_no as user_use9_1_,
+        notice0_.views as views8_1_ 
+    from
+        notice notice0_
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        user
+        (created_at, updated_at, role, user_id, user_name, user_pw, user_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        user
+        (created_at, updated_at, role, user_id, user_name, user_pw, user_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        user0_.user_no as user_no1_2_,
+        user0_.created_at as created_2_2_,
+        user0_.updated_at as updated_3_2_,
+        user0_.role as role4_2_,
+        user0_.user_id as user_id5_2_,
+        user0_.user_name as user_nam6_2_,
+        user0_.user_pw as user_pw7_2_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        notice0_.notice_no as notice_n1_1_,
+        notice0_.created_at as created_2_1_,
+        notice0_.updated_at as updated_3_1_,
+        notice0_.contents as contents4_1_,
+        notice0_.notice_end_date as notice_e5_1_,
+        notice0_.notice_start_date as notice_s6_1_,
+        notice0_.title as title7_1_,
+        notice0_.user_user_no as user_use9_1_,
+        notice0_.views as views8_1_ 
+    from
+        notice notice0_ 
+    where
+        notice0_.title=?
+2022-03-06 22:04:39.876  INFO 23887 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@3fc08eec testClass = NoticeServiceTest, testInstance = com.rsupport.noticeproject.notice.service.NoticeServiceTest@591b9836, testMethod = deleteNotice@NoticeServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5cad8b7d testClass = NoticeServiceTest, locations = '{}', classes = '{class com.rsupport.noticeproject.NoticeProjectApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@10993713, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7b324585, [ImportsContextCustomizer@7b02e036 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7894f09b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7be58f16, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1e1d3956, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@51bf5add], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+2022-03-06 22:04:39.892  INFO 23887 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@3fc08eec testClass = NoticeServiceTest, testInstance = com.rsupport.noticeproject.notice.service.NoticeServiceTest@35355074, testMethod = findNoticeDetail@NoticeServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5cad8b7d testClass = NoticeServiceTest, locations = '{}', classes = '{class com.rsupport.noticeproject.NoticeProjectApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@10993713, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7b324585, [ImportsContextCustomizer@7b02e036 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7894f09b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7be58f16, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1e1d3956, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@51bf5add], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1027cdcd]; rollback [true]
+Hibernate: 
+    select
+        notice0_.notice_no as notice_n1_1_,
+        notice0_.created_at as created_2_1_,
+        notice0_.updated_at as updated_3_1_,
+        notice0_.contents as contents4_1_,
+        notice0_.notice_end_date as notice_e5_1_,
+        notice0_.notice_start_date as notice_s6_1_,
+        notice0_.title as title7_1_,
+        notice0_.user_user_no as user_use9_1_,
+        notice0_.views as views8_1_ 
+    from
+        notice notice0_
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        user
+        (created_at, updated_at, role, user_id, user_name, user_pw, user_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        user
+        (created_at, updated_at, role, user_id, user_name, user_pw, user_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        user0_.user_no as user_no1_2_,
+        user0_.created_at as created_2_2_,
+        user0_.updated_at as updated_3_2_,
+        user0_.role as role4_2_,
+        user0_.user_id as user_id5_2_,
+        user0_.user_name as user_nam6_2_,
+        user0_.user_pw as user_pw7_2_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        notice0_.notice_no as notice_n1_1_,
+        notice0_.created_at as created_2_1_,
+        notice0_.updated_at as updated_3_1_,
+        notice0_.contents as contents4_1_,
+        notice0_.notice_end_date as notice_e5_1_,
+        notice0_.notice_start_date as notice_s6_1_,
+        notice0_.title as title7_1_,
+        notice0_.user_user_no as user_use9_1_,
+        notice0_.views as views8_1_ 
+    from
+        notice notice0_ 
+    where
+        notice0_.title=?
+2022-03-06 22:04:40.048  INFO 23887 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@3fc08eec testClass = NoticeServiceTest, testInstance = com.rsupport.noticeproject.notice.service.NoticeServiceTest@35355074, testMethod = findNoticeDetail@NoticeServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5cad8b7d testClass = NoticeServiceTest, locations = '{}', classes = '{class com.rsupport.noticeproject.NoticeProjectApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@10993713, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7b324585, [ImportsContextCustomizer@7b02e036 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7894f09b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7be58f16, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1e1d3956, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@51bf5add], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+2022-03-06 22:04:40.053  INFO 23887 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@3fc08eec testClass = NoticeServiceTest, testInstance = com.rsupport.noticeproject.notice.service.NoticeServiceTest@4a0b1701, testMethod = setNoticeViews@NoticeServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5cad8b7d testClass = NoticeServiceTest, locations = '{}', classes = '{class com.rsupport.noticeproject.NoticeProjectApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@10993713, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7b324585, [ImportsContextCustomizer@7b02e036 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7894f09b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7be58f16, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1e1d3956, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@51bf5add], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1027cdcd]; rollback [true]
+Hibernate: 
+    select
+        notice0_.notice_no as notice_n1_1_,
+        notice0_.created_at as created_2_1_,
+        notice0_.updated_at as updated_3_1_,
+        notice0_.contents as contents4_1_,
+        notice0_.notice_end_date as notice_e5_1_,
+        notice0_.notice_start_date as notice_s6_1_,
+        notice0_.title as title7_1_,
+        notice0_.user_user_no as user_use9_1_,
+        notice0_.views as views8_1_ 
+    from
+        notice notice0_
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        user
+        (created_at, updated_at, role, user_id, user_name, user_pw, user_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        user
+        (created_at, updated_at, role, user_id, user_name, user_pw, user_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        user0_.user_no as user_no1_2_,
+        user0_.created_at as created_2_2_,
+        user0_.updated_at as updated_3_2_,
+        user0_.role as role4_2_,
+        user0_.user_id as user_id5_2_,
+        user0_.user_name as user_nam6_2_,
+        user0_.user_pw as user_pw7_2_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+2022-03-06 22:04:40.132  INFO 23887 --- [    Test worker] c.r.n.notice.service.NoticeService       : =========start update views========
+2022-03-06 22:04:40.150  INFO 23887 --- [    Test worker] c.r.n.notice.service.NoticeService       : =========end update views========
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    update
+        notice 
+    set
+        updated_at=?,
+        views=? 
+    where
+        notice_no=?
+Hibernate: 
+    update
+        notice 
+    set
+        updated_at=?,
+        views=? 
+    where
+        notice_no=?
+Hibernate: 
+    select
+        notice0_.notice_no as notice_n1_1_,
+        notice0_.created_at as created_2_1_,
+        notice0_.updated_at as updated_3_1_,
+        notice0_.contents as contents4_1_,
+        notice0_.notice_end_date as notice_e5_1_,
+        notice0_.notice_start_date as notice_s6_1_,
+        notice0_.title as title7_1_,
+        notice0_.user_user_no as user_use9_1_,
+        notice0_.views as views8_1_ 
+    from
+        notice notice0_ 
+    where
+        notice0_.title=?
+Hibernate: 
+    select
+        notice0_.notice_no as notice_n1_1_,
+        notice0_.created_at as created_2_1_,
+        notice0_.updated_at as updated_3_1_,
+        notice0_.contents as contents4_1_,
+        notice0_.notice_end_date as notice_e5_1_,
+        notice0_.notice_start_date as notice_s6_1_,
+        notice0_.title as title7_1_,
+        notice0_.user_user_no as user_use9_1_,
+        notice0_.views as views8_1_ 
+    from
+        notice notice0_ 
+    where
+        notice0_.title=?
+2022-03-06 22:04:40.169  INFO 23887 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@3fc08eec testClass = NoticeServiceTest, testInstance = com.rsupport.noticeproject.notice.service.NoticeServiceTest@4a0b1701, testMethod = setNoticeViews@NoticeServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5cad8b7d testClass = NoticeServiceTest, locations = '{}', classes = '{class com.rsupport.noticeproject.NoticeProjectApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@10993713, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7b324585, [ImportsContextCustomizer@7b02e036 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7894f09b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7be58f16, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1e1d3956, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@51bf5add], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+2022-03-06 22:04:40.175  INFO 23887 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@3fc08eec testClass = NoticeServiceTest, testInstance = com.rsupport.noticeproject.notice.service.NoticeServiceTest@5efb7f82, testMethod = createNotice@NoticeServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5cad8b7d testClass = NoticeServiceTest, locations = '{}', classes = '{class com.rsupport.noticeproject.NoticeProjectApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@10993713, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7b324585, [ImportsContextCustomizer@7b02e036 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7894f09b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7be58f16, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1e1d3956, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@51bf5add], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1027cdcd]; rollback [true]
+Hibernate: 
+    select
+        notice0_.notice_no as notice_n1_1_,
+        notice0_.created_at as created_2_1_,
+        notice0_.updated_at as updated_3_1_,
+        notice0_.contents as contents4_1_,
+        notice0_.notice_end_date as notice_e5_1_,
+        notice0_.notice_start_date as notice_s6_1_,
+        notice0_.title as title7_1_,
+        notice0_.user_user_no as user_use9_1_,
+        notice0_.views as views8_1_ 
+    from
+        notice notice0_
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        user
+        (created_at, updated_at, role, user_id, user_name, user_pw, user_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        user
+        (created_at, updated_at, role, user_id, user_name, user_pw, user_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        user0_.user_no as user_no1_2_,
+        user0_.created_at as created_2_2_,
+        user0_.updated_at as updated_3_2_,
+        user0_.role as role4_2_,
+        user0_.user_id as user_id5_2_,
+        user0_.user_name as user_nam6_2_,
+        user0_.user_pw as user_pw7_2_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        notice0_.notice_no as notice_n1_1_,
+        notice0_.created_at as created_2_1_,
+        notice0_.updated_at as updated_3_1_,
+        notice0_.contents as contents4_1_,
+        notice0_.notice_end_date as notice_e5_1_,
+        notice0_.notice_start_date as notice_s6_1_,
+        notice0_.title as title7_1_,
+        notice0_.user_user_no as user_use9_1_,
+        notice0_.views as views8_1_ 
+    from
+        notice notice0_ 
+    where
+        notice0_.title=?
+2022-03-06 22:04:40.214  INFO 23887 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@3fc08eec testClass = NoticeServiceTest, testInstance = com.rsupport.noticeproject.notice.service.NoticeServiceTest@5efb7f82, testMethod = createNotice@NoticeServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5cad8b7d testClass = NoticeServiceTest, locations = '{}', classes = '{class com.rsupport.noticeproject.NoticeProjectApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@10993713, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7b324585, [ImportsContextCustomizer@7b02e036 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7894f09b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7be58f16, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1e1d3956, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@51bf5add], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+2022-03-06 22:04:40.222  INFO 23887 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@3fc08eec testClass = NoticeServiceTest, testInstance = com.rsupport.noticeproject.notice.service.NoticeServiceTest@53bc8c7e, testMethod = findNoticeList@NoticeServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5cad8b7d testClass = NoticeServiceTest, locations = '{}', classes = '{class com.rsupport.noticeproject.NoticeProjectApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@10993713, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7b324585, [ImportsContextCustomizer@7b02e036 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7894f09b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7be58f16, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1e1d3956, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@51bf5add], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1027cdcd]; rollback [true]
+Hibernate: 
+    select
+        notice0_.notice_no as notice_n1_1_,
+        notice0_.created_at as created_2_1_,
+        notice0_.updated_at as updated_3_1_,
+        notice0_.contents as contents4_1_,
+        notice0_.notice_end_date as notice_e5_1_,
+        notice0_.notice_start_date as notice_s6_1_,
+        notice0_.title as title7_1_,
+        notice0_.user_user_no as user_use9_1_,
+        notice0_.views as views8_1_ 
+    from
+        notice notice0_
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        user
+        (created_at, updated_at, role, user_id, user_name, user_pw, user_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        user
+        (created_at, updated_at, role, user_id, user_name, user_pw, user_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        user0_.user_no as user_no1_2_,
+        user0_.created_at as created_2_2_,
+        user0_.updated_at as updated_3_2_,
+        user0_.role as role4_2_,
+        user0_.user_id as user_id5_2_,
+        user0_.user_name as user_nam6_2_,
+        user0_.user_pw as user_pw7_2_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        notice
+        (created_at, updated_at, contents, notice_end_date, notice_start_date, title, user_user_no, views, notice_no) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        notice0_.notice_no as notice_n1_1_,
+        notice0_.created_at as created_2_1_,
+        notice0_.updated_at as updated_3_1_,
+        notice0_.contents as contents4_1_,
+        notice0_.notice_end_date as notice_e5_1_,
+        notice0_.notice_start_date as notice_s6_1_,
+        notice0_.title as title7_1_,
+        notice0_.user_user_no as user_use9_1_,
+        notice0_.views as views8_1_ 
+    from
+        notice notice0_ 
+    where
+        notice0_.notice_start_date&lt;? 
+        and notice0_.notice_end_date&gt;? 
+    order by
+        notice0_.created_at desc
+2022-03-06 22:04:40.365  INFO 23887 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@3fc08eec testClass = NoticeServiceTest, testInstance = com.rsupport.noticeproject.notice.service.NoticeServiceTest@53bc8c7e, testMethod = findNoticeList@NoticeServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5cad8b7d testClass = NoticeServiceTest, locations = '{}', classes = '{class com.rsupport.noticeproject.NoticeProjectApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@10993713, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7b324585, [ImportsContextCustomizer@7b02e036 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7894f09b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7be58f16, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1e1d3956, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@51bf5add], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4</a> at 2022. 3. 6. 오후 10:04:40</p>
+</div>
+</div>
+</body>
+</html>

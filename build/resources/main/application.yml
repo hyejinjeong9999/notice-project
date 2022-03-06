@@ -1,0 +1,29 @@
+
+spring:
+
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/testdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
+
+  cache:
+    type: redis
+    redis:
+      time-to-live: 3600
+      cache-null-values: true
+
+  redis:
+    host: localhost
+    port: 6379
+
+file_dir: "/Users/jeonghyejin/upload/"
